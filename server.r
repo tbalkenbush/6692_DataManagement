@@ -1,10 +1,8 @@
-library(tidyverse)
-
 function(input, output, session) {
     
     # Combine the selected variables into a new data frame
     selectedData <- reactive({
-        iris[, c(input$xcol, input$ycol)] 
+        iris[, c(input$xcol, input$ycol)]
     })
     
     clusters <- reactive({
